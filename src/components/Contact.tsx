@@ -19,8 +19,10 @@ const contacts = [
   {
     label: 'EMAIL',
     value: 'joseandrescisternaszurita@gmail.com',
-    href: 'mailto:joseandrescisternaszurita@gmail.com',
-    external: false,
+    // Abre el redactor de Gmail (web) con el destinatario y asunto ya cargados.
+    href:
+      'https://mail.google.com/mail/?view=cm&fs=1&to=joseandrescisternaszurita@gmail.com&su=Contacto%20desde%20tu%20portafolio',
+    external: true,
     breakAll: true,
   },
   {

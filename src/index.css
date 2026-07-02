@@ -4,7 +4,7 @@
   --ink: #24201b;
   --muted: #6e685e;
   --line: #cfc8ba;
-  --accent: #c6482e;
+  --accent: #2f6db5;
   --grid: 0;
 }
 
@@ -21,7 +21,7 @@ body {
 }
 
 ::selection {
-  background: #c6482e;
+  background: #2f6db5;
   color: #efebe2;
 }
 
