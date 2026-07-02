@@ -1,0 +1,45 @@
+:root {
+  /* Light "paper" theme — the design's default palette */
+  --paper: #efebe2;
+  --ink: #24201b;
+  --muted: #6e685e;
+  --line: #cfc8ba;
+  --accent: #c6482e;
+  --grid: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+}
+
+::selection {
+  background: #c6482e;
+  color: #efebe2;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.25;
+  }
+}
