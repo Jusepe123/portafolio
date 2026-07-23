@@ -1,6 +1,7 @@
 import type { CSSProperties } from 'react'
 import { mono, maxWidth } from '../tokens'
 import { useClock } from '../hooks/useClock'
+import { useLang, useT } from '../i18n'
 
 const navLink: CSSProperties = {
   fontFamily: mono,
@@ -10,16 +11,57 @@ const navLink: CSSProperties = {
   textDecoration: 'none',
 }
 
-const nav = [
-  { href: '#sobre', label: '01·Sobre' },
-  { href: '#destacado', label: '02·Destacado' },
-  { href: '#proyectos', label: '03·Proyectos' },
-  { href: '#experiencia', label: '04·Exp' },
-  { href: '#certificaciones', label: '05·Certs' },
-]
+/** Segmented ES / EN control styled to match the mono UI chips. */
+function LangToggle() {
+  const { lang, setLang } = useLang()
+  const t = useT()
+  const seg = (code: 'es' | 'en'): CSSProperties => ({
+    fontFamily: mono,
+    fontSize: 11,
+    letterSpacing: '0.08em',
+    padding: '4px 8px',
+    borderRadius: 2,
+    color: lang === code ? 'var(--paper)' : 'var(--muted)',
+    background: lang === code ? 'var(--accent)' : 'transparent',
+  })
+  return (
+    <div
+      role="group"
+      aria-label={t.langToggleAria}
+      style={{
+        display: 'inline-flex',
+        alignItems: 'center',
+        gap: 2,
+        padding: 2,
+        border: '1px solid var(--line)',
+        borderRadius: 4,
+      }}
+    >
+      <button
+        type="button"
+        className="lang-seg"
+        onClick={() => setLang('es')}
+        aria-pressed={lang === 'es'}
+        style={{ border: 'none', cursor: 'pointer', ...seg('es') }}
+      >
+        ES
+      </button>
+      <button
+        type="button"
+        className="lang-seg"
+        onClick={() => setLang('en')}
+        aria-pressed={lang === 'en'}
+        style={{ border: 'none', cursor: 'pointer', ...seg('en') }}
+      >
+        EN
+      </button>
+    </div>
+  )
+}
 
 export function Header() {
   const clock = useClock()
+  const t = useT()
   return (
     <header
       style={{
@@ -62,13 +104,14 @@ export function Header() {
           </span>
         </a>
         <nav style={{ display: 'flex', alignItems: 'center', gap: 22 }}>
-          {nav.map((n) => (
-            <a key={n.href} href={n.href} style={navLink}>
+          {t.nav.map((n) => (
+            <a key={n.href} href={n.href} className="nav-link" style={navLink}>
               {n.label}
             </a>
           ))}
           <a
             href="#contacto"
+            className="btn"
             style={{
               fontFamily: mono,
               fontSize: 11,
@@ -80,8 +123,9 @@ export function Header() {
               borderRadius: 2,
             }}
           >
-            06·Contacto
+            {t.navContact}
           </a>
+          <LangToggle />
         </nav>
         <span
           style={{

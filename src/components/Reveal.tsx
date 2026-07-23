@@ -1,7 +1,21 @@
 import { useEffect, useRef, useState, type CSSProperties, type ReactNode } from 'react'
 
-/** Fades + slides its children in the first time they scroll into view. */
-export function Reveal({ children, style }: { children: ReactNode; style?: CSSProperties }) {
+/**
+ * Fades + slides its children in the first time they scroll into view.
+ * `delay` (ms) staggers siblings; motion is neutralized by the global
+ * prefers-reduced-motion rule in index.css.
+ */
+export function Reveal({
+  children,
+  style,
+  delay = 0,
+  className,
+}: {
+  children: ReactNode
+  style?: CSSProperties
+  delay?: number
+  className?: string
+}) {
   const ref = useRef<HTMLDivElement>(null)
   const [shown, setShown] = useState(false)
 
@@ -26,10 +40,11 @@ export function Reveal({ children, style }: { children: ReactNode; style?: CSSPr
   return (
     <div
       ref={ref}
+      className={className}
       style={{
         opacity: shown ? 1 : 0,
-        transform: shown ? 'none' : 'translateY(16px)',
-        transition: 'opacity .7s ease, transform .7s ease',
+        transform: shown ? 'none' : 'translateY(18px)',
+        transition: `opacity .7s ease ${delay}ms, transform .7s ease ${delay}ms`,
         ...style,
       }}
     >

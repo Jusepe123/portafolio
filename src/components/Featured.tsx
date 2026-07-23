@@ -1,9 +1,11 @@
 import { mono, maxWidth } from '../tokens'
 import { featuredStack } from '../data'
+import { useT } from '../i18n'
 import { Reveal } from './Reveal'
 import { SectionLabel } from './SectionLabel'
 
 export function Featured() {
+  const t = useT()
   return (
     <section
       id="destacado"
@@ -17,7 +19,7 @@ export function Featured() {
     >
       <div style={{ maxWidth, margin: '0 auto', padding: '96px 40px' }}>
         <Reveal>
-          <SectionLabel num="02" label="Proyecto destacado" dark />
+          <SectionLabel num="02" label={t.featured.label} dark />
           <div
             style={{
               display: 'grid',
@@ -36,7 +38,7 @@ export function Featured() {
                   marginBottom: 16,
                 }}
               >
-                FULL-STACK MÓVIL · EN PRODUCCIÓN
+                {t.featured.kicker}
               </div>
               <h2
                 style={{
@@ -47,18 +49,17 @@ export function Featured() {
                   letterSpacing: '-0.02em',
                 }}
               >
-                App de Predicciones
+                {t.featured.titleLine1}
                 <br />
-                Mundial 2026
+                {t.featured.titleLine2}
               </h2>
               <p style={{ margin: '0 0 28px', fontSize: 18, lineHeight: 1.6, opacity: 0.82, maxWidth: 520 }}>
-                App móvil full-stack con sincronización de resultados en vivo, leaderboard y validación
-                server-side. En uso activo por ~20 usuarios reales.
+                {t.featured.desc}
               </p>
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8, marginBottom: 30 }}>
-                {featuredStack.map((t) => (
+                {featuredStack.map((tag) => (
                   <span
-                    key={t}
+                    key={tag}
                     style={{
                       fontFamily: mono,
                       fontSize: 12,
@@ -67,22 +68,22 @@ export function Featured() {
                       borderRadius: 2,
                     }}
                   >
-                    {t}
+                    {tag}
                   </span>
                 ))}
               </div>
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3,auto)', gap: 32 }}>
                 <div>
                   <div style={{ fontSize: 30, fontWeight: 500, fontVariantNumeric: 'tabular-nums' }}>~20</div>
-                  <div style={{ fontFamily: mono, fontSize: 11, opacity: 0.6 }}>usuarios activos</div>
+                  <div style={{ fontFamily: mono, fontSize: 11, opacity: 0.6 }}>{t.featured.stat1Note}</div>
                 </div>
                 <div>
-                  <div style={{ fontSize: 30, fontWeight: 500 }}>Live</div>
-                  <div style={{ fontFamily: mono, fontSize: 11, opacity: 0.6 }}>sync de resultados</div>
+                  <div style={{ fontSize: 30, fontWeight: 500 }}>{t.featured.stat2Value}</div>
+                  <div style={{ fontFamily: mono, fontSize: 11, opacity: 0.6 }}>{t.featured.stat2Note}</div>
                 </div>
                 <div>
                   <div style={{ fontSize: 30, fontWeight: 500 }}>SDK 52</div>
-                  <div style={{ fontFamily: mono, fontSize: 11, opacity: 0.6 }}>Expo · TypeScript</div>
+                  <div style={{ fontFamily: mono, fontSize: 11, opacity: 0.6 }}>{t.featured.stat3Note}</div>
                 </div>
               </div>
             </div>
@@ -116,7 +117,7 @@ export function Featured() {
                   color: 'rgba(255,255,255,0.5)',
                 }}
               >
-                Mundial 2026 · US · CA · MX
+                {t.featured.caption}
               </span>
             </div>
           </div>

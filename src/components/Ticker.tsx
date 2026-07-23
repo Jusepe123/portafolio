@@ -1,9 +1,8 @@
 import { mono } from '../tokens'
-
-const TEXT =
-  'Python · TypeScript · C# · Kotlin ✦ React Native + Supabase ✦ AWS Amplify · IAM · Lambda ✦ n8n automation ✦ AI agents ✦ Claude Code ✦ Cochabamba, Bolivia ✦ '
+import { useT } from '../i18n'
 
 export function Ticker() {
+  const TEXT = useT().ticker
   return (
     <div
       style={{

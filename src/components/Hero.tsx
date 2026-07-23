@@ -1,6 +1,7 @@
 import type { CSSProperties, ReactNode } from 'react'
 import { mono, maxWidth } from '../tokens'
-import { useCountUp } from '../hooks/useCountUp'
+import { useT } from '../i18n'
+import { Reveal } from './Reveal'
 
 const specLabel: CSSProperties = {
   fontFamily: mono,
@@ -45,7 +46,8 @@ function Spec({
 }
 
 export function Hero() {
-  const gpa = useCountUp(94)
+  const t = useT()
+  const s = t.hero.specs
   return (
     <section
       id="inicio"
@@ -60,7 +62,7 @@ export function Hero() {
         }}
       >
         {/* LEFT */}
-        <div>
+        <Reveal>
           <div
             style={{
               display: 'flex',
@@ -79,7 +81,7 @@ export function Hero() {
                 textTransform: 'uppercase',
               }}
             >
-              Portafolio — 2026
+              {t.hero.kicker}
             </span>
             <span
               style={{
@@ -105,7 +107,7 @@ export function Hero() {
                   animation: 'blink 2.4s ease-in-out infinite',
                 }}
               />
-              Disponible para pasantía
+              {t.hero.badge}
             </span>
           </div>
           <h1
@@ -133,14 +135,20 @@ export function Hero() {
               color: 'var(--ink)',
             }}
           >
-            Estudiante de <strong style={{ fontWeight: 600 }}>Ingeniería de Sistemas</strong> construyendo
-            en la intersección de <span style={{ color: 'var(--accent)' }}>IA</span>,{' '}
-            <span style={{ color: 'var(--accent)' }}>cloud (AWS)</span> y desarrollo{' '}
-            <span style={{ color: 'var(--accent)' }}>full-stack</span>. Autodidacta, orientado a producción.
+            {t.hero.leadStudent}
+            <strong style={{ fontWeight: 600 }}>{t.hero.leadField}</strong>
+            {t.hero.leadBuilding}
+            <span style={{ color: 'var(--accent)' }}>{t.hero.leadIA}</span>
+            {', '}
+            <span style={{ color: 'var(--accent)' }}>{t.hero.leadCloud}</span>
+            {t.hero.leadMid}
+            <span style={{ color: 'var(--accent)' }}>{t.hero.leadFullstack}</span>
+            {t.hero.leadTail}
           </p>
           <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap', marginTop: 32 }}>
             <a
               href="#destacado"
+              className="btn"
               style={{
                 fontFamily: mono,
                 fontSize: 13,
@@ -152,12 +160,13 @@ export function Hero() {
                 borderRadius: 2,
               }}
             >
-              Ver trabajo →
+              {t.hero.ctaWork}
             </a>
             <a
               href="https://github.com/Jusepe123"
               target="_blank"
               rel="noopener noreferrer"
+              className="btn"
               style={{
                 fontFamily: mono,
                 fontSize: 13,
@@ -169,99 +178,99 @@ export function Hero() {
                 borderRadius: 2,
               }}
             >
-              GitHub ↗
+              {t.hero.ctaGithub}
             </a>
           </div>
-        </div>
+        </Reveal>
 
         {/* RIGHT: portrait */}
-        <figure style={{ margin: 0, position: 'relative' }}>
-          <div
-            style={{
-              position: 'relative',
-              padding: 10,
-              border: '1px solid var(--line)',
-              borderRadius: 4,
-              background: 'var(--paper)',
-            }}
-          >
-            <img
-              src="/assets/portrait-color.jpg"
-              alt="José Andrés Cisternas Zurita"
+        <Reveal delay={120}>
+          <figure style={{ margin: 0, position: 'relative' }}>
+            <div
               style={{
-                display: 'block',
-                width: '100%',
-                aspectRatio: '4/5',
-                objectFit: 'cover',
-                objectPosition: 'center 15%',
-                borderRadius: 2,
-              }}
-            />
-            <span
-              style={{
-                position: 'absolute',
-                left: 20,
-                bottom: 20,
-                fontFamily: mono,
-                fontSize: 10,
-                letterSpacing: '0.14em',
-                textTransform: 'uppercase',
-                color: 'var(--paper)',
-                background: 'var(--ink)',
-                padding: '5px 10px',
-                borderRadius: 2,
+                position: 'relative',
+                padding: 10,
+                border: '1px solid var(--line)',
+                borderRadius: 4,
+                background: 'var(--paper)',
               }}
             >
-              Ref.01 · Cochabamba, BO
-            </span>
-          </div>
-        </figure>
+              <img
+                src="/assets/portrait-color.jpg"
+                alt="José Andrés Cisternas Zurita"
+                style={{
+                  display: 'block',
+                  width: '100%',
+                  aspectRatio: '4/5',
+                  objectFit: 'cover',
+                  objectPosition: 'center 15%',
+                  borderRadius: 2,
+                }}
+              />
+              <span
+                style={{
+                  position: 'absolute',
+                  left: 20,
+                  bottom: 20,
+                  fontFamily: mono,
+                  fontSize: 10,
+                  letterSpacing: '0.14em',
+                  textTransform: 'uppercase',
+                  color: 'var(--paper)',
+                  background: 'var(--ink)',
+                  padding: '5px 10px',
+                  borderRadius: 2,
+                }}
+              >
+                {t.hero.portraitTag}
+              </span>
+            </div>
+          </figure>
+        </Reveal>
       </div>
 
       {/* SPEC STRIP */}
-      <div
-        style={{
-          marginTop: 52,
-          borderTop: '1px solid var(--line)',
-          borderBottom: '1px solid var(--line)',
-          display: 'grid',
-          gridTemplateColumns: 'repeat(4,1fr)',
-        }}
-      >
-        <Spec
-          style={{ padding: '20px 22px 20px 0', borderRight: '1px solid var(--line)' }}
-          label="Promedio"
-          value={
-            <span style={{ fontVariantNumeric: 'tabular-nums' }}>
-              {gpa}
-              <span style={{ fontSize: 16, color: 'var(--muted)' }}>/100</span>
-            </span>
-          }
-          note={<span style={{ color: 'var(--accent)' }}>Cuadro de Honor</span>}
-        />
-        <Spec
-          style={{ padding: '20px 22px', borderRight: '1px solid var(--line)' }}
-          label="Carrera"
-          value={
-            <span>
-              2.º<span style={{ fontSize: 16, color: 'var(--muted)' }}> año</span>
-            </span>
-          }
-          note="UPB · 9 semestres"
-        />
-        <Spec
-          style={{ padding: '20px 22px', borderRight: '1px solid var(--line)' }}
-          label="Rol"
-          value="Fundador"
-          note="Meliorem · AWS SBG"
-        />
-        <Spec
-          style={{ padding: '20px 0 20px 22px' }}
-          label="Idiomas"
-          value="ES · EN"
-          note="Nativo · B2–C1"
-        />
-      </div>
+      <Reveal delay={220}>
+        <div
+          style={{
+            marginTop: 52,
+            borderTop: '1px solid var(--line)',
+            borderBottom: '1px solid var(--line)',
+            display: 'grid',
+            gridTemplateColumns: 'repeat(4,1fr)',
+          }}
+        >
+          <Spec
+            style={{ padding: '20px 22px 20px 0', borderRight: '1px solid var(--line)' }}
+            label={s.standingLabel}
+            value={s.standingValue}
+            note={<span style={{ color: 'var(--accent)' }}>{s.standingNote}</span>}
+          />
+          <Spec
+            style={{ padding: '20px 22px', borderRight: '1px solid var(--line)' }}
+            label={s.programLabel}
+            value={
+              <span>
+                {s.programYear}
+                <span style={{ fontSize: 16, color: 'var(--muted)' }}>{s.programYearUnit}</span>
+              </span>
+            }
+            note={s.programNote}
+          />
+          <Spec
+            style={{ padding: '20px 22px', borderRight: '1px solid var(--line)' }}
+            label={s.roleLabel}
+            value={s.roleValue}
+            note={s.roleNote}
+          />
+          <Spec
+            style={{ padding: '20px 0 20px 22px' }}
+            label={s.langLabel}
+            value={s.langValue}
+            note={s.langNote}
+          />
+        </div>
+      </Reveal>
     </section>
   )
 }

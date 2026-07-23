@@ -43,3 +43,67 @@ body {
     opacity: 0.25;
   }
 }
+
+/* --- Micro-interactions -------------------------------------------------- */
+
+/* Card lift on hover — used on project cards, competition rows, cert columns. */
+.hover-card {
+  transition: transform 0.22s ease, border-color 0.22s ease, box-shadow 0.22s ease;
+}
+.hover-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--accent);
+  box-shadow: 0 10px 30px -18px color-mix(in srgb, var(--ink) 55%, transparent);
+}
+
+/* Buttons / primary links */
+.btn {
+  transition: transform 0.18s ease, opacity 0.18s ease, background 0.18s ease;
+}
+.btn:hover {
+  transform: translateY(-2px);
+  opacity: 0.92;
+}
+
+/* Header nav links */
+.nav-link {
+  transition: color 0.18s ease;
+}
+.nav-link:hover {
+  color: var(--ink);
+}
+
+/* Dark contact tiles */
+.contact-tile {
+  transition: background 0.22s ease, transform 0.22s ease;
+}
+.contact-tile:hover {
+  background: #2f2a24;
+  transform: translateY(-2px);
+}
+
+/* Skill / stack chips */
+.chip {
+  transition: border-color 0.18s ease, color 0.18s ease;
+}
+.chip:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+/* Language segmented toggle */
+.lang-seg {
+  transition: color 0.18s ease;
+}
+
+/* Respect users who prefer reduced motion: neutralize all motion. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}

@@ -1,16 +1,19 @@
 import { mono, serif, maxWidth } from '../tokens'
 import { skills } from '../data'
+import { useLang, useT } from '../i18n'
 import { Reveal } from './Reveal'
 import { SectionLabel } from './SectionLabel'
 
 export function About() {
+  const { lang } = useLang()
+  const t = useT()
   return (
     <section
       id="sobre"
       style={{ position: 'relative', zIndex: 1, maxWidth, margin: '0 auto', padding: '96px 40px' }}
     >
       <Reveal>
-        <SectionLabel num="01" label="Sobre mí" />
+        <SectionLabel num="01" label={t.about.label} />
         <div
           style={{
             display: 'grid',
@@ -30,9 +33,7 @@ export function About() {
                 letterSpacing: '-0.01em',
               }}
             >
-              Aprendo rápido y construyo cosas que corren en producción. Co-fundé una iniciativa de
-              automatización para PYMES y ayudé a levantar la primera comunidad AWS estudiantil de
-              Cochabamba.
+              {t.about.p1}
             </p>
             <p
               style={{
@@ -44,10 +45,7 @@ export function About() {
                 color: 'var(--muted)',
               }}
             >
-              Me muevo cómodo entre el frontend, el backend y la nube: integro agentes de IA en flujos de
-              trabajo reales, resuelvo incidencias bajo presión en hackathones y disfruto optimizar
-              procesos con código. Ahora busco una pasantía donde aplicar esa mentalidad autodidacta en
-              problemas de verdad.
+              {t.about.p2}
             </p>
           </div>
           <div style={{ border: '1px solid var(--line)', borderRadius: 3 }}>
@@ -62,10 +60,14 @@ export function About() {
                 color: 'var(--muted)',
               }}
             >
-              Stack técnico
+              {t.about.stackTitle}
             </div>
-            {skills.map((grp) => (
-              <div key={grp.group} style={{ padding: '16px 18px', borderBottom: '1px solid var(--line)' }}>
+            {skills[lang].map((grp, gi) => (
+              <Reveal
+                key={grp.group}
+                delay={gi * 80}
+                style={{ padding: '16px 18px', borderBottom: '1px solid var(--line)' }}
+              >
                 <div
                   style={{
                     fontFamily: mono,
@@ -81,6 +83,7 @@ export function About() {
                   {grp.items.map((it) => (
                     <span
                       key={it}
+                      className="chip"
                       style={{
                         fontFamily: mono,
                         fontSize: 12,
@@ -93,10 +96,10 @@ export function About() {
                     </span>
                   ))}
                 </div>
-              </div>
+              </Reveal>
             ))}
             <div style={{ padding: '14px 18px', fontFamily: mono, fontSize: 11, color: 'var(--muted)' }}>
-              Aux. de Cátedra — Cálculo &amp; Física
+              {t.about.auxNote}
             </div>
           </div>
         </div>
