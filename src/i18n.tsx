@@ -51,7 +51,7 @@ const es = {
   langToggleAria: 'Cambiar idioma a inglés',
   hero: {
     kicker: 'Portafolio — 2026',
-    badge: 'Disponible para pasantía',
+    badge: 'Disponible para trabajo',
     leadStudent: 'Estudiante de ',
     leadField: 'Ingeniería de Sistemas',
     leadBuilding: ' construyendo en la intersección de ',
@@ -134,7 +134,7 @@ const en: typeof es = {
   langToggleAria: 'Switch language to Spanish',
   hero: {
     kicker: 'Portfolio — 2026',
-    badge: 'Available for internship',
+    badge: 'Available for work',
     leadStudent: 'Student of ',
     leadField: 'Systems Engineering',
     leadBuilding: ' building at the intersection of ',
