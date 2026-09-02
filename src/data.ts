@@ -200,6 +200,7 @@ const certsEs: CertGroup[] = [
   {
     issuer: 'Amazon Web Services',
     items: [
+      { name: 'AWS Certified AI Practitioner', date: 'Ago 2026' },
       { name: 'AWS Cloud Clubs — Core Team', date: 'Mar 2026' },
       { name: 'AWS Educate · Getting Started with Compute', date: 'Mar 2026' },
       { name: 'AWS Educate · Getting Started with Storage', date: 'Abr 2026' },
@@ -220,6 +221,7 @@ const certsEn: CertGroup[] = [
   {
     issuer: 'Amazon Web Services',
     items: [
+      { name: 'AWS Certified AI Practitioner', date: 'Aug 2026' },
       { name: 'AWS Cloud Clubs — Core Team', date: 'Mar 2026' },
       { name: 'AWS Educate · Getting Started with Compute', date: 'Mar 2026' },
       { name: 'AWS Educate · Getting Started with Storage', date: 'Apr 2026' },

@@ -1,6 +1,6 @@
 import type { CSSProperties, ReactNode } from 'react'
 import { mono, maxWidth } from '../tokens'
-import { useT } from '../i18n'
+import { useLang, useT } from '../i18n'
 import { Reveal } from './Reveal'
 
 const specLabel: CSSProperties = {
@@ -46,6 +46,7 @@ function Spec({
 }
 
 export function Hero() {
+  const { lang } = useLang()
   const t = useT()
   const s = t.hero.specs
   return (
@@ -161,6 +162,23 @@ export function Hero() {
               }}
             >
               {t.hero.ctaWork}
+            </a>
+            <a
+              href={`/CV-Jose-Andres-Cisternas-Zurita-${lang.toUpperCase()}.pdf`}
+              download={`CV-Jose-Andres-Cisternas-Zurita-${lang.toUpperCase()}.pdf`}
+              className="btn"
+              style={{
+                fontFamily: mono,
+                fontSize: 13,
+                letterSpacing: '0.04em',
+                textDecoration: 'none',
+                color: 'var(--accent)',
+                border: '1px solid var(--accent)',
+                padding: '14px 22px',
+                borderRadius: 2,
+              }}
+            >
+              {t.hero.ctaCv}
             </a>
             <a
               href="https://github.com/Jusepe123"

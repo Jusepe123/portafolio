@@ -61,6 +61,7 @@ const es = {
     leadFullstack: 'full-stack',
     leadTail: '. Autodidacta, orientado a producción.',
     ctaWork: 'Ver trabajo →',
+    ctaCv: 'Descargar CV ↓',
     ctaGithub: 'GitHub ↗',
     portraitTag: 'Ref.01 · Cochabamba, BO',
     specs: {
@@ -144,6 +145,7 @@ const en: typeof es = {
     leadFullstack: 'full-stack',
     leadTail: ' development. Self-taught, production-oriented.',
     ctaWork: 'See work →',
+    ctaCv: 'Download CV ↓',
     ctaGithub: 'GitHub ↗',
     portraitTag: 'Ref.01 · Cochabamba, BO',
     specs: {
