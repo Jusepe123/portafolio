@@ -96,6 +96,55 @@ body {
   transition: color 0.18s ease;
 }
 
+.featured-project {
+  display: grid;
+  grid-template-columns: 1fr 0.9fr;
+  gap: 56px;
+  align-items: center;
+}
+
+.featured-project--reverse .featured-project__copy {
+  order: 2;
+}
+
+.featured-project--reverse .featured-project__visual {
+  order: 1;
+}
+
+.featured-stats {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  gap: 32px;
+}
+
+.featured-link {
+  display: inline-block;
+  margin-top: 30px;
+  color: var(--paper);
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px solid var(--accent);
+  padding-bottom: 4px;
+}
+
+@media (max-width: 760px) {
+  .featured-project {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .featured-project--reverse .featured-project__copy,
+  .featured-project--reverse .featured-project__visual {
+    order: initial;
+  }
+
+  .featured-stats {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+}
+
 /* Respect users who prefer reduced motion: neutralize all motion. */
 @media (prefers-reduced-motion: reduce) {
   *,

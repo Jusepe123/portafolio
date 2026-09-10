@@ -57,6 +57,14 @@ export const featuredStack: string[] = [
   'React Query',
 ]
 
+export const momentumStack: string[] = [
+  'React',
+  'TypeScript',
+  'Supabase',
+  'Recharts',
+  'Expo · React Native',
+]
+
 export const projects: Record<Lang, Project[]> = {
   es: [
     {

@@ -1,11 +1,46 @@
 import { mono, maxWidth } from '../tokens'
-import { featuredStack } from '../data'
+import { featuredStack, momentumStack } from '../data'
 import { useT } from '../i18n'
 import { Reveal } from './Reveal'
 import { SectionLabel } from './SectionLabel'
 
 export function Featured() {
   const t = useT()
+  const featuredProjects = [
+    {
+      kicker: t.featured.kicker,
+      titleLine1: t.featured.titleLine1,
+      titleLine2: t.featured.titleLine2,
+      desc: t.featured.desc,
+      stack: featuredStack,
+      stats: [
+        ['~20', t.featured.stat1Note],
+        [t.featured.stat2Value, t.featured.stat2Note],
+        ['SDK 52', t.featured.stat3Note],
+      ],
+      image: '/assets/worldcup.png',
+      imageAlt: 'FIFA World Cup 2026',
+      caption: t.featured.caption,
+    },
+    {
+      kicker: t.featured.momentum.kicker,
+      titleLine1: t.featured.momentum.titleLine1,
+      titleLine2: t.featured.momentum.titleLine2,
+      desc: t.featured.momentum.desc,
+      stack: momentumStack,
+      stats: [
+        [t.featured.momentum.stat1Value, t.featured.momentum.stat1Note],
+        [t.featured.momentum.stat2Value, t.featured.momentum.stat2Note],
+        [t.featured.momentum.stat3Value, t.featured.momentum.stat3Note],
+      ],
+      image: '/assets/momentum.png',
+      imageAlt: 'Momentum multisport training tracker',
+      caption: t.featured.momentum.caption,
+      href: 'https://github.com/Jusepe123/Momentum',
+      link: t.featured.momentum.link,
+    },
+  ]
+
   return (
     <section
       id="destacado"
@@ -20,15 +55,13 @@ export function Featured() {
       <div style={{ maxWidth, margin: '0 auto', padding: '96px 40px' }}>
         <Reveal>
           <SectionLabel num="02" label={t.featured.label} dark />
-          <div
-            style={{
-              display: 'grid',
-              gridTemplateColumns: '1fr 0.9fr',
-              gap: 56,
-              alignItems: 'center',
-            }}
-          >
-            <div>
+          {featuredProjects.map((project, projectIndex) => (
+            <div
+              className={`featured-project${projectIndex % 2 === 1 ? ' featured-project--reverse' : ''}`}
+              key={project.titleLine1}
+              style={{ marginTop: projectIndex === 0 ? 0 : 88 }}
+            >
+              <div className="featured-project__copy">
               <div
                 style={{
                   fontFamily: mono,
@@ -38,7 +71,7 @@ export function Featured() {
                   marginBottom: 16,
                 }}
               >
-                {t.featured.kicker}
+                {project.kicker}
               </div>
               <h2
                 style={{
@@ -49,15 +82,15 @@ export function Featured() {
                   letterSpacing: '-0.02em',
                 }}
               >
-                {t.featured.titleLine1}
+                {project.titleLine1}
                 <br />
-                {t.featured.titleLine2}
+                {project.titleLine2}
               </h2>
               <p style={{ margin: '0 0 28px', fontSize: 18, lineHeight: 1.6, opacity: 0.82, maxWidth: 520 }}>
-                {t.featured.desc}
+                {project.desc}
               </p>
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8, marginBottom: 30 }}>
-                {featuredStack.map((tag) => (
+                {project.stack.map((tag) => (
                   <span
                     key={tag}
                     style={{
@@ -72,22 +105,29 @@ export function Featured() {
                   </span>
                 ))}
               </div>
-              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3,auto)', gap: 32 }}>
-                <div>
-                  <div style={{ fontSize: 30, fontWeight: 500, fontVariantNumeric: 'tabular-nums' }}>~20</div>
-                  <div style={{ fontFamily: mono, fontSize: 11, opacity: 0.6 }}>{t.featured.stat1Note}</div>
-                </div>
-                <div>
-                  <div style={{ fontSize: 30, fontWeight: 500 }}>{t.featured.stat2Value}</div>
-                  <div style={{ fontFamily: mono, fontSize: 11, opacity: 0.6 }}>{t.featured.stat2Note}</div>
-                </div>
-                <div>
-                  <div style={{ fontSize: 30, fontWeight: 500 }}>SDK 52</div>
-                  <div style={{ fontFamily: mono, fontSize: 11, opacity: 0.6 }}>{t.featured.stat3Note}</div>
-                </div>
+              <div className="featured-stats">
+                {project.stats.map(([value, note]) => (
+                  <div key={note}>
+                    <div style={{ fontSize: 30, fontWeight: 500, fontVariantNumeric: 'tabular-nums' }}>
+                      {value}
+                    </div>
+                    <div style={{ fontFamily: mono, fontSize: 11, opacity: 0.6 }}>{note}</div>
+                  </div>
+                ))}
               </div>
+              {project.href && (
+                <a
+                  className="featured-link"
+                  href={project.href}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  {project.link} ↗
+                </a>
+              )}
             </div>
             <div
+              className="featured-project__visual"
               style={{
                 aspectRatio: '4/5',
                 borderRadius: 4,
@@ -104,9 +144,9 @@ export function Featured() {
               }}
             >
               <img
-                src="/assets/worldcup.png"
-                alt="FIFA World Cup 2026"
-                style={{ display: 'block', width: '74%', maxWidth: 280, height: 'auto' }}
+                src={project.image}
+                alt={project.imageAlt}
+                style={{ display: 'block', width: projectIndex === 0 ? '74%' : '100%', maxWidth: projectIndex === 0 ? 280 : 560, height: 'auto' }}
               />
               <span
                 style={{
@@ -117,10 +157,11 @@ export function Featured() {
                   color: 'rgba(255,255,255,0.5)',
                 }}
               >
-                {t.featured.caption}
+                {project.caption}
               </span>
             </div>
-          </div>
+            </div>
+          ))}
         </Reveal>
       </div>
     </section>
