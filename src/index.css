@@ -128,6 +128,14 @@ body {
   padding-bottom: 4px;
 }
 
+.momentum-app-icon {
+  opacity: 0.96;
+  mix-blend-mode: screen;
+  filter: saturate(1.08) contrast(1.08);
+  -webkit-mask-image: radial-gradient(circle at center, #000 48%, rgba(0, 0, 0, 0.94) 60%, transparent 76%);
+  mask-image: radial-gradient(circle at center, #000 48%, rgba(0, 0, 0, 0.94) 60%, transparent 76%);
+}
+
 @media (max-width: 760px) {
   .featured-project {
     grid-template-columns: 1fr;

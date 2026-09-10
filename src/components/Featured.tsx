@@ -146,7 +146,13 @@ export function Featured() {
               <img
                 src={project.image}
                 alt={project.imageAlt}
-                style={{ display: 'block', width: projectIndex === 0 ? '74%' : '100%', maxWidth: projectIndex === 0 ? 280 : 560, height: 'auto' }}
+                className={projectIndex === 1 ? 'momentum-app-icon' : undefined}
+                style={{
+                  display: 'block',
+                  width: projectIndex === 0 ? '74%' : '92%',
+                  maxWidth: projectIndex === 0 ? 280 : 430,
+                  height: 'auto',
+                }}
               />
               <span
                 style={{
