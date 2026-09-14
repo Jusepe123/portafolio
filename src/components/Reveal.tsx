@@ -40,7 +40,7 @@ export function Reveal({
   return (
     <div
       ref={ref}
-      className={className}
+      className={className ? `reveal ${className}` : 'reveal'}
       style={{
         opacity: shown ? 1 : 0,
         transform: shown ? 'none' : 'translateY(18px)',

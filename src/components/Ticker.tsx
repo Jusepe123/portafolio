@@ -16,6 +16,7 @@ export function Ticker() {
       }}
     >
       <div
+        className="ticker-track"
         style={{
           display: 'flex',
           width: 'max-content',

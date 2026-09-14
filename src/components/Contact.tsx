@@ -64,7 +64,7 @@ export function Contact() {
         borderTop: '1px solid var(--line)',
       }}
     >
-      <div style={{ maxWidth, margin: '0 auto', padding: '110px 40px 60px' }}>
+      <div className="section-shell contact-shell" style={{ maxWidth, margin: '0 auto', padding: '110px 40px 60px' }}>
         <Reveal>
           <div style={{ display: 'flex', alignItems: 'center', gap: 18, marginBottom: 44 }}>
             <span style={{ fontFamily: mono, fontSize: 13, color: 'var(--accent)' }}>06</span>
@@ -96,6 +96,7 @@ export function Contact() {
           </h2>
         </Reveal>
         <div
+          className="contact-grid"
           style={{
             display: 'grid',
             gridTemplateColumns: 'repeat(4,1fr)',

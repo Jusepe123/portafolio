@@ -10,12 +10,14 @@ export function Projects() {
   return (
     <section
       id="proyectos"
+      className="section-shell"
       style={{ position: 'relative', zIndex: 1, maxWidth, margin: '0 auto', padding: '96px 40px' }}
     >
       <Reveal>
         <SectionLabel num="03" label={t.projects.label} />
       </Reveal>
       <div
+        className="projects-grid"
         style={{
           display: 'grid',
           gridTemplateColumns: 'repeat(3,1fr)',
@@ -29,6 +31,7 @@ export function Projects() {
           <Reveal
             key={p.title}
             delay={i * 90}
+            className="project-card"
             style={{
               padding: '26px 24px',
               borderRight: '1px solid var(--line)',
@@ -76,12 +79,12 @@ export function Projects() {
           </Reveal>
         ))}
       </div>
-      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16, marginTop: 16 }}>
+      <div className="competitions-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16, marginTop: 16 }}>
         {competitions[lang].map((c, i) => (
           <Reveal
             key={c.name}
             delay={i * 90}
-            className="hover-card"
+            className="hover-card competition-card"
             style={{
               display: 'flex',
               alignItems: 'center',

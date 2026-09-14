@@ -10,11 +10,13 @@ export function About() {
   return (
     <section
       id="sobre"
+      className="section-shell"
       style={{ position: 'relative', zIndex: 1, maxWidth, margin: '0 auto', padding: '96px 40px' }}
     >
       <Reveal>
         <SectionLabel num="01" label={t.about.label} />
         <div
+          className="about-grid"
           style={{
             display: 'grid',
             gridTemplateColumns: '1.4fr 1fr',

@@ -52,7 +52,7 @@ export function Featured() {
         borderTop: '1px solid var(--line)',
       }}
     >
-      <div style={{ maxWidth, margin: '0 auto', padding: '96px 40px' }}>
+      <div className="section-shell" style={{ maxWidth, margin: '0 auto', padding: '96px 40px' }}>
         <Reveal>
           <SectionLabel num="02" label={t.featured.label} dark />
           {featuredProjects.map((project, projectIndex) => (

@@ -17,7 +17,7 @@ export function ExperienceSection() {
         background: 'color-mix(in srgb, var(--ink) 4%, var(--paper))',
       }}
     >
-      <div style={{ maxWidth, margin: '0 auto', padding: '96px 40px' }}>
+      <div className="section-shell" style={{ maxWidth, margin: '0 auto', padding: '96px 40px' }}>
         <Reveal>
           <SectionLabel num="04" label={t.experience.label} />
         </Reveal>
@@ -25,6 +25,7 @@ export function ExperienceSection() {
           <Reveal
             key={`${e.org}-${e.role}`}
             delay={i * 90}
+            className="experience-entry"
             style={{
               display: 'grid',
               gridTemplateColumns: '0.5fr 1.5fr',

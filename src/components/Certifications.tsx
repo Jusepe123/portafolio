@@ -22,7 +22,7 @@ export function Certifications() {
         background: 'color-mix(in srgb, var(--accent) 6%, var(--paper))',
       }}
     >
-      <div style={{ maxWidth, margin: '0 auto', padding: '96px 40px' }}>
+      <div className="section-shell" style={{ maxWidth, margin: '0 auto', padding: '96px 40px' }}>
         <Reveal>
           <SectionLabel num="05" label={t.certs.label} />
         </Reveal>
@@ -96,7 +96,7 @@ export function Certifications() {
         </Reveal>
 
         {/* Issuer cards */}
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 20 }}>
+        <div className="certifications-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 20 }}>
           {groups.map((grp, gi) => (
             <Reveal
               key={grp.issuer}
@@ -139,6 +139,7 @@ export function Certifications() {
               {grp.items.map((c) => (
                 <div
                   key={c.name}
+                  className="certification-row"
                   style={{
                     display: 'flex',
                     alignItems: 'baseline',
@@ -148,7 +149,7 @@ export function Certifications() {
                     borderBottom: '1px solid var(--line)',
                   }}
                 >
-                  <span style={{ display: 'flex', gap: 11, alignItems: 'baseline' }}>
+                  <span className="certification-name" style={{ display: 'flex', gap: 11, alignItems: 'baseline' }}>
                     <span
                       aria-hidden="true"
                       style={{ color: 'var(--accent)', fontFamily: mono, fontSize: 13, flexShrink: 0 }}
@@ -158,6 +159,7 @@ export function Certifications() {
                     <span style={{ fontSize: 15.5, lineHeight: 1.35 }}>{c.name}</span>
                   </span>
                   <span
+                    className="certification-date"
                     style={{
                       fontFamily: mono,
                       fontSize: 11,

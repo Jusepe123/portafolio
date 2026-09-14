@@ -37,9 +37,9 @@ function Spec({
   style?: CSSProperties
 }) {
   return (
-    <div style={style}>
+    <div className="hero-spec" style={style}>
       <div style={specLabel}>{label}</div>
-      <div style={specValue}>{value}</div>
+      <div className="hero-spec__value" style={specValue}>{value}</div>
       <div style={specNote}>{note}</div>
     </div>
   )
@@ -52,9 +52,11 @@ export function Hero() {
   return (
     <section
       id="inicio"
+      className="section-shell hero-section"
       style={{ position: 'relative', zIndex: 1, maxWidth, margin: '0 auto', padding: '78px 40px 46px' }}
     >
       <div
+        className="hero-grid"
         style={{
           display: 'grid',
           gridTemplateColumns: '1.05fr 0.95fr',
@@ -112,6 +114,7 @@ export function Hero() {
             </span>
           </div>
           <h1
+            className="hero-title"
             style={{
               margin: 0,
               fontWeight: 500,
@@ -146,7 +149,7 @@ export function Hero() {
             <span style={{ color: 'var(--accent)' }}>{t.hero.leadFullstack}</span>
             {t.hero.leadTail}
           </p>
-          <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap', marginTop: 32 }}>
+          <div className="hero-actions" style={{ display: 'flex', gap: 12, flexWrap: 'wrap', marginTop: 32 }}>
             <a
               href="#destacado"
               className="btn"
@@ -203,7 +206,7 @@ export function Hero() {
 
         {/* RIGHT: portrait */}
         <Reveal delay={120}>
-          <figure style={{ margin: 0, position: 'relative' }}>
+          <figure className="hero-portrait" style={{ margin: 0, position: 'relative' }}>
             <div
               style={{
                 position: 'relative',
@@ -250,6 +253,7 @@ export function Hero() {
       {/* SPEC STRIP */}
       <Reveal delay={220}>
         <div
+          className="hero-spec-grid"
           style={{
             marginTop: 52,
             borderTop: '1px solid var(--line)',

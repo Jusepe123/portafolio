@@ -14,7 +14,7 @@ export function SectionLabel({
   right?: ReactNode
 }) {
   return (
-    <div style={{ display: 'flex', alignItems: 'center', gap: 18, marginBottom: 44 }}>
+    <div className="section-label" style={{ display: 'flex', alignItems: 'center', gap: 18, marginBottom: 44 }}>
       <span style={{ fontFamily: mono, fontSize: 13, color: 'var(--accent)' }}>{num}</span>
       <span
         style={{

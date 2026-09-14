@@ -1,4 +1,5 @@
 import type { CSSProperties } from 'react'
+import { useState } from 'react'
 import { mono, maxWidth } from '../tokens'
 import { useClock } from '../hooks/useClock'
 import { useLang, useT } from '../i18n'
@@ -12,7 +13,7 @@ const navLink: CSSProperties = {
 }
 
 /** Segmented ES / EN control styled to match the mono UI chips. */
-function LangToggle() {
+function LangToggle({ onSelect }: { onSelect?: () => void }) {
   const { lang, setLang } = useLang()
   const t = useT()
   const seg = (code: 'es' | 'en'): CSSProperties => ({
@@ -28,6 +29,7 @@ function LangToggle() {
     <div
       role="group"
       aria-label={t.langToggleAria}
+      className="lang-toggle"
       style={{
         display: 'inline-flex',
         alignItems: 'center',
@@ -40,7 +42,10 @@ function LangToggle() {
       <button
         type="button"
         className="lang-seg"
-        onClick={() => setLang('es')}
+        onClick={() => {
+          setLang('es')
+          onSelect?.()
+        }}
         aria-pressed={lang === 'es'}
         style={{ border: 'none', cursor: 'pointer', ...seg('es') }}
       >
@@ -49,7 +54,10 @@ function LangToggle() {
       <button
         type="button"
         className="lang-seg"
-        onClick={() => setLang('en')}
+        onClick={() => {
+          setLang('en')
+          onSelect?.()
+        }}
         aria-pressed={lang === 'en'}
         style={{ border: 'none', cursor: 'pointer', ...seg('en') }}
       >
@@ -61,7 +69,11 @@ function LangToggle() {
 
 export function Header() {
   const clock = useClock()
+  const { lang } = useLang()
   const t = useT()
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const menuLabel = lang === 'es' ? 'Menú' : 'Menu'
+  const closeLabel = lang === 'es' ? 'Cerrar' : 'Close'
   return (
     <header
       style={{
@@ -74,6 +86,7 @@ export function Header() {
       }}
     >
       <div
+        className="site-header__inner"
         style={{
           maxWidth,
           margin: '0 auto',
@@ -82,6 +95,7 @@ export function Header() {
           alignItems: 'center',
           justifyContent: 'space-between',
           gap: 24,
+          position: 'relative',
         }}
       >
         <a
@@ -103,15 +117,49 @@ export function Header() {
             J.A. Cisternas
           </span>
         </a>
-        <nav style={{ display: 'flex', alignItems: 'center', gap: 22 }}>
+        <button
+          type="button"
+          className="mobile-menu-button"
+          aria-expanded={mobileMenuOpen}
+          aria-controls="site-navigation"
+          onClick={() => setMobileMenuOpen((open) => !open)}
+          style={{
+            display: 'none',
+            alignItems: 'center',
+            justifyContent: 'center',
+            fontFamily: mono,
+            fontSize: 11,
+            letterSpacing: '0.08em',
+            color: 'var(--ink)',
+            background: 'transparent',
+            border: '1px solid var(--line)',
+            borderRadius: 2,
+            padding: '8px 11px',
+            cursor: 'pointer',
+          }}
+        >
+          {mobileMenuOpen ? closeLabel : menuLabel}
+        </button>
+        <nav
+          id="site-navigation"
+          className={`site-nav${mobileMenuOpen ? ' site-nav--open' : ''}`}
+          style={{ display: 'flex', alignItems: 'center', gap: 22 }}
+        >
           {t.nav.map((n) => (
-            <a key={n.href} href={n.href} className="nav-link" style={navLink}>
+            <a
+              key={n.href}
+              href={n.href}
+              className="nav-link"
+              style={navLink}
+              onClick={() => setMobileMenuOpen(false)}
+            >
               {n.label}
             </a>
           ))}
           <a
             href="#contacto"
-            className="btn"
+            className="btn header-contact"
+            onClick={() => setMobileMenuOpen(false)}
             style={{
               fontFamily: mono,
               fontSize: 11,
@@ -125,9 +173,10 @@ export function Header() {
           >
             {t.navContact}
           </a>
-          <LangToggle />
+          <LangToggle onSelect={() => setMobileMenuOpen(false)} />
         </nav>
         <span
+          className="site-header__clock"
           style={{
             fontFamily: mono,
             fontSize: 12,
