@@ -79,6 +79,11 @@ export function ExperienceSection() {
                   </li>
                 ))}
               </ul>
+              {e.url && (
+                <a href={e.url} target="_blank" rel="noopener noreferrer" style={{ display: 'inline-block', marginTop: 16, fontFamily: mono, fontSize: 13, color: 'var(--accent)', textUnderlineOffset: 3 }}>
+                  {t.experience.eventLink}
+                </a>
+              )}
             </div>
           </Reveal>
         ))}

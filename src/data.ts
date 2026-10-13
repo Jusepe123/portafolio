@@ -25,13 +25,14 @@ export interface Experience {
   role: string
   period: string
   logo?: string
+  url?: string
   place: string
   points: string[]
 }
 
 export interface CertGroup {
   issuer: string
-  items: { name: string; date: string }[]
+  items: { name: string; date: string; url?: string }[]
 }
 
 export const skills: Record<Lang, SkillGroup[]> = {
@@ -130,6 +131,17 @@ export const competitions: Record<Lang, Competition[]> = {
 export const experience: Record<Lang, Experience[]> = {
   es: [
     {
+      org: 'AWS Student Community Day Cochabamba 2026',
+      role: 'Organizador',
+      period: '10 Oct 2026',
+      logo: '/assets/awsbg-mark.png',
+      url: 'https://bolivia.studentcommunity.day/',
+      place: 'Universidad Privada Boliviana · Cochabamba, Bolivia',
+      points: [
+        'Participó como organizador de la primera edición del AWS Student Community Day en Bolivia, junto a los AWS Student Builder Groups.',
+      ],
+    },
+    {
       org: 'Meliorem',
       role: 'Miembro Fundador',
       period: '2024 — Presente',
@@ -166,6 +178,17 @@ export const experience: Record<Lang, Experience[]> = {
     },
   ],
   en: [
+    {
+      org: 'AWS Student Community Day Cochabamba 2026',
+      role: 'Organizer',
+      period: '10 Oct 2026',
+      logo: '/assets/awsbg-mark.png',
+      url: 'https://bolivia.studentcommunity.day/',
+      place: 'Universidad Privada Boliviana · Cochabamba, Bolivia',
+      points: [
+        'Served as an organizer of the first AWS Student Community Day in Bolivia, alongside the AWS Student Builder Groups.',
+      ],
+    },
     {
       org: 'Meliorem',
       role: 'Founding Member',
@@ -208,6 +231,7 @@ const certsEs: CertGroup[] = [
   {
     issuer: 'Amazon Web Services',
     items: [
+      { name: 'AWS Certified Cloud Practitioner', date: '2026', url: 'https://www.credly.com/badges/b0c508b9-311e-41cd-96a7-028001fe66cf/public_url' },
       { name: 'AWS Certified AI Practitioner', date: 'Ago 2026' },
       { name: 'AWS Cloud Clubs — Core Team', date: 'Mar 2026' },
       { name: 'AWS Educate · Getting Started with Compute', date: 'Mar 2026' },
@@ -229,6 +253,7 @@ const certsEn: CertGroup[] = [
   {
     issuer: 'Amazon Web Services',
     items: [
+      { name: 'AWS Certified Cloud Practitioner', date: '2026', url: 'https://www.credly.com/badges/b0c508b9-311e-41cd-96a7-028001fe66cf/public_url' },
       { name: 'AWS Certified AI Practitioner', date: 'Aug 2026' },
       { name: 'AWS Cloud Clubs — Core Team', date: 'Mar 2026' },
       { name: 'AWS Educate · Getting Started with Compute', date: 'Mar 2026' },

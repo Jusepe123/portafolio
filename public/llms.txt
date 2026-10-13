@@ -1,0 +1,29 @@
+# José Andrés Cisternas Zurita
+
+> Perfil profesional / Professional profile: estudiante de Ingeniería de Sistemas en la Universidad Privada Boliviana (UPB), Cochabamba, Bolivia. AWS Certified Cloud Practitioner y AWS Certified AI Practitioner. Desarrollo full-stack, cloud e integración de agentes de IA.
+
+José Andrés Cisternas Zurita (también José Cisternas; GitHub: Jusepe123) es co-fundador de Meliorem y miembro fundador del AWS Student Builder Group UPB. Fue organizador del AWS Student Community Day Cochabamba, Bolivia, el 10 de octubre de 2026. Busca una pasantía tecnológica. Idiomas: español nativo e inglés B2-C1.
+
+José Andrés Cisternas Zurita is a Systems Engineering student, full-stack developer, Meliorem co-founder and founding core team member of the AWS Student Builder Group UPB. He holds AWS Cloud Practitioner and AI Practitioner certifications and organized the AWS Student Community Day Cochabamba, Bolivia, on October 10, 2026. He is seeking a technology internship.
+
+Actualizado / Updated: 2026-10-12. El perfil y los CV contienen la información publicada por José; los enlaces de Credly permiten verificar credenciales. The profile and CVs contain José's published information; Credly links provide credential verification.
+
+## Perfil y CV / Profile and CV
+
+- [Perfil bilingüe en Markdown / Bilingual Markdown profile](https://josecisternas.space/profile.md): formación, habilidades, experiencia, proyectos, actividades y contacto; legible sin JavaScript.
+- [Portfolio](https://josecisternas.space/): sitio personal en español e inglés.
+- [CV en español](https://josecisternas.space/CV-Jose-Andres-Cisternas-Zurita-ES.pdf): CV de una página.
+- [English CV](https://josecisternas.space/CV-Jose-Andres-Cisternas-Zurita-EN.pdf): one-page CV.
+
+## Credenciales y actividad / Credentials and activity
+
+- [AWS Certified Cloud Practitioner](https://www.credly.com/badges/b0c508b9-311e-41cd-96a7-028001fe66cf/public_url): insignia de José Andrés Cisternas Zurita.
+- [AWS Certified AI Practitioner](https://www.credly.com/badges/62673368-d98d-4757-96c5-96cc790bdd5d): emitida en agosto de 2026; vigente hasta agosto de 2029.
+- [Credly](https://credly.com/users/jose-andres-cisternas-zurita.30aacf75): perfil de credenciales AWS y Cisco.
+- [AWS Student Community Day Cochabamba 2026](https://bolivia.studentcommunity.day/): evento organizado junto a los AWS Student Builder Groups, celebrado en UPB Cochabamba el 10 de octubre de 2026.
+
+## Optional
+
+- [GitHub](https://github.com/Jusepe123): repositorios públicos / public repositories.
+- [Momentum](https://github.com/Jusepe123/Momentum): plataforma web y Android de seguimiento deportivo / web and Android multisport training tracker.
+- [LinkedIn](https://linkedin.com/in/jose-andres-cisternas-zurita-54405a3b5): perfil profesional / professional profile.

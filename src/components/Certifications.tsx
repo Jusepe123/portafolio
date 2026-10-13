@@ -156,7 +156,13 @@ export function Certifications() {
                     >
                       ✓
                     </span>
-                    <span style={{ fontSize: 15.5, lineHeight: 1.35 }}>{c.name}</span>
+                    {c.url ? (
+                      <a href={c.url} target="_blank" rel="noopener noreferrer" style={{ fontSize: 15.5, lineHeight: 1.35, color: 'inherit', textUnderlineOffset: 3 }}>
+                        {c.name} ↗
+                      </a>
+                    ) : (
+                      <span style={{ fontSize: 15.5, lineHeight: 1.35 }}>{c.name}</span>
+                    )}
                   </span>
                   <span
                     className="certification-date"

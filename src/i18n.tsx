@@ -119,7 +119,8 @@ const es = {
     label: 'Otros proyectos',
   },
   experience: {
-    label: 'Experiencia',
+    label: 'Experiencia y actividades relevantes',
+    eventLink: 'Ver evento ↗',
   },
   certs: {
     label: 'Certificaciones',
@@ -217,7 +218,8 @@ const en: typeof es = {
     label: 'Other projects',
   },
   experience: {
-    label: 'Experience',
+    label: 'Experience and relevant activities',
+    eventLink: 'View event ↗',
   },
   certs: {
     label: 'Certifications',
