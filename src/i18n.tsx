@@ -81,7 +81,7 @@ const es = {
     },
   },
   ticker:
-    'Python · TypeScript · C# · Kotlin ✦ React Native + Supabase ✦ AWS Amplify · IAM · Lambda ✦ Automatización n8n ✦ Agentes de IA ✦ Claude Code ✦ Cochabamba, Bolivia ✦ ',
+    'Python · TypeScript · C# · Kotlin ✦ React Native + Supabase ✦ AWS EC2 · S3 · IAM ✦ Automatización n8n ✦ Agentes de IA · IA generativa ✦ Kiro · Claude Code ✦ Cochabamba, Bolivia ✦ ',
   about: {
     label: 'Sobre mí',
     p1: 'Aprendo rápido y construyo cosas que corren en producción. Co-fundé una iniciativa de automatización para PYMES y ayudé a levantar la primera comunidad AWS estudiantil de Cochabamba.',
@@ -180,7 +180,7 @@ const en: typeof es = {
     },
   },
   ticker:
-    'Python · TypeScript · C# · Kotlin ✦ React Native + Supabase ✦ AWS Amplify · IAM · Lambda ✦ n8n automation ✦ AI agents ✦ Claude Code ✦ Cochabamba, Bolivia ✦ ',
+    'Python · TypeScript · C# · Kotlin ✦ React Native + Supabase ✦ AWS EC2 · S3 · IAM ✦ n8n automation ✦ AI agents · Generative AI ✦ Kiro · Claude Code ✦ Cochabamba, Bolivia ✦ ',
   about: {
     label: 'About me',
     p1: "I learn fast and build things that run in production. I co-founded a process-automation initiative for SMEs and helped launch Cochabamba's first student AWS community.",

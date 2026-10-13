@@ -2,9 +2,9 @@
 
 > Perfil profesional / Professional profile: estudiante de Ingeniería de Sistemas en la Universidad Privada Boliviana (UPB), Cochabamba, Bolivia. AWS Certified Cloud Practitioner y AWS Certified AI Practitioner. Desarrollo full-stack, cloud e integración de agentes de IA.
 
-José Andrés Cisternas Zurita (también José Cisternas; GitHub: Jusepe123) es co-fundador de Meliorem y miembro fundador del AWS Student Builder Group UPB. Fue organizador del AWS Student Community Day Cochabamba, Bolivia, el 10 de octubre de 2026. Busca una pasantía tecnológica. Idiomas: español nativo e inglés B2-C1.
+José Andrés Cisternas Zurita (también José Cisternas; GitHub: Jusepe123) es co-fundador de Meliorem y miembro fundador del AWS Student Builder Group UPB, donde realizó varios talleres sobre EC2, S3, Amplify y Kiro y fue organizador del AWS Student Community Day Cochabamba, Bolivia, el 10 de octubre de 2026. Integra agentes de IA, IA generativa y automatizaciones con n8n. Busca oportunidades de trabajo en IA, cloud o desarrollo de software. Idiomas: español nativo e inglés B2-C1.
 
-José Andrés Cisternas Zurita is a Systems Engineering student, full-stack developer, Meliorem co-founder and founding core team member of the AWS Student Builder Group UPB. He holds AWS Cloud Practitioner and AI Practitioner certifications and organized the AWS Student Community Day Cochabamba, Bolivia, on October 10, 2026. He is seeking a technology internship.
+José Andrés Cisternas Zurita is a Systems Engineering student, full-stack developer, Meliorem co-founder and founding core team member of the AWS Student Builder Group UPB, where he delivered multiple workshops on EC2, S3, Amplify and Kiro and organized the AWS Student Community Day Cochabamba, Bolivia, on October 10, 2026. He holds AWS Cloud Practitioner and AI Practitioner certifications and integrates AI agents, generative AI and n8n automation. He is seeking employment opportunities in AI, cloud or software development.
 
 Actualizado / Updated: 2026-10-12. El perfil y los CV contienen la información publicada por José; los enlaces de Credly permiten verificar credenciales. The profile and CVs contain José's published information; Credly links provide credential verification.
 

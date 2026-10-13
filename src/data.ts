@@ -39,14 +39,16 @@ export const skills: Record<Lang, SkillGroup[]> = {
   es: [
     { group: 'Lenguajes', items: ['Python', 'TypeScript', 'C#', 'Java', 'Kotlin'] },
     { group: 'Frameworks', items: ['React Native', 'React', 'Zustand', 'React Query', 'Supabase'] },
-    { group: 'Tooling', items: ['Git', 'SQL', 'n8n', 'Claude Code', 'VS Code'] },
-    { group: 'Cloud · AWS', items: ['Amplify', 'IAM', 'Lambda'] },
+    { group: 'Tooling', items: ['Git', 'SQL', 'VS Code'] },
+    { group: 'Cloud · AWS', items: ['EC2', 'S3', 'IAM', 'Lambda', 'Amplify'] },
+    { group: 'IA y automatización', items: ['Agentes de IA', 'IA generativa', 'n8n', 'Kiro', 'Claude Code'] },
   ],
   en: [
     { group: 'Languages', items: ['Python', 'TypeScript', 'C#', 'Java', 'Kotlin'] },
     { group: 'Frameworks', items: ['React Native', 'React', 'Zustand', 'React Query', 'Supabase'] },
-    { group: 'Tooling', items: ['Git', 'SQL', 'n8n', 'Claude Code', 'VS Code'] },
-    { group: 'Cloud · AWS', items: ['Amplify', 'IAM', 'Lambda'] },
+    { group: 'Tooling', items: ['Git', 'SQL', 'VS Code'] },
+    { group: 'Cloud · AWS', items: ['EC2', 'S3', 'IAM', 'Lambda', 'Amplify'] },
+    { group: 'AI and automation', items: ['AI agents', 'Generative AI', 'n8n', 'Kiro', 'Claude Code'] },
   ],
 }
 
@@ -131,17 +133,6 @@ export const competitions: Record<Lang, Competition[]> = {
 export const experience: Record<Lang, Experience[]> = {
   es: [
     {
-      org: 'AWS Student Community Day Cochabamba 2026',
-      role: 'Organizador',
-      period: '10 Oct 2026',
-      logo: '/assets/awsbg-mark.png',
-      url: 'https://bolivia.studentcommunity.day/',
-      place: 'Universidad Privada Boliviana · Cochabamba, Bolivia',
-      points: [
-        'Participó como organizador de la primera edición del AWS Student Community Day en Bolivia, junto a los AWS Student Builder Groups.',
-      ],
-    },
-    {
       org: 'Meliorem',
       role: 'Miembro Fundador',
       period: '2024 — Presente',
@@ -158,11 +149,12 @@ export const experience: Record<Lang, Experience[]> = {
       role: 'Core Team · Miembro Fundador',
       period: '2024 — Presente',
       logo: '/assets/awsbg-mark.png',
+      url: 'https://bolivia.studentcommunity.day/',
       place: 'Amazon Web Services · Cochabamba',
       points: [
         'Equipo fundador del primer AWS Student Builder Group de Cochabamba.',
-        'Lideró un taller de AWS Amplify (React + Vite + Amplify Gen 2): slides, documentación y guía práctica de cinco módulos.',
-        'Resolvió incidencias de permisos IAM y gestionó la limpieza de recursos Lambda huérfanos post-despliegue.',
+        'Realizó varios talleres sobre EC2, S3, Amplify y Kiro.',
+        'Organizador del AWS Student Community Day Cochabamba, Bolivia 2026, celebrado el 10 de octubre en UPB Cochabamba junto a los AWS Student Builder Groups.',
       ],
     },
     {
@@ -178,17 +170,6 @@ export const experience: Record<Lang, Experience[]> = {
     },
   ],
   en: [
-    {
-      org: 'AWS Student Community Day Cochabamba 2026',
-      role: 'Organizer',
-      period: '10 Oct 2026',
-      logo: '/assets/awsbg-mark.png',
-      url: 'https://bolivia.studentcommunity.day/',
-      place: 'Universidad Privada Boliviana · Cochabamba, Bolivia',
-      points: [
-        'Served as an organizer of the first AWS Student Community Day in Bolivia, alongside the AWS Student Builder Groups.',
-      ],
-    },
     {
       org: 'Meliorem',
       role: 'Founding Member',
@@ -206,11 +187,12 @@ export const experience: Record<Lang, Experience[]> = {
       role: 'Core Team · Founding Member',
       period: '2024 — Present',
       logo: '/assets/awsbg-mark.png',
+      url: 'https://bolivia.studentcommunity.day/',
       place: 'Amazon Web Services · Cochabamba',
       points: [
         'Founding team of the first AWS Student Builder Group in Cochabamba.',
-        'Led an AWS Amplify workshop (React + Vite + Amplify Gen 2): slides, documentation and a five-module hands-on guide.',
-        'Resolved IAM permission issues and managed cleanup of orphaned Lambda resources post-deployment.',
+        'Delivered multiple workshops on EC2, S3, Amplify and Kiro.',
+        'Organizer of the AWS Student Community Day Cochabamba, Bolivia 2026, held on October 10 at UPB Cochabamba alongside the AWS Student Builder Groups.',
       ],
     },
     {

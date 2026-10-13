@@ -6,13 +6,12 @@ Portfolio: https://josecisternas.space/ · GitHub: https://github.com/Jusepe123
 
 ## Español
 
-Estudiante de Ingeniería de Sistemas en la Universidad Privada Boliviana (UPB), Cochabamba, Bolivia. Miembro del Cuadro de Honor; 2.º año de un programa de 9 semestres iniciado en 2025. Auxiliar de Cátedra en Cálculo y Física, con apoyo académico a estudiantes de primer año y colegio. Busco una pasantía en IA, cloud o desarrollo de software.
+Estudiante de Ingeniería de Sistemas en la Universidad Privada Boliviana (UPB), Cochabamba, Bolivia. Miembro del Cuadro de Honor; 2.º año de un programa de 9 semestres iniciado en 2025. Auxiliar de Cátedra en Cálculo y Física, con apoyo académico a estudiantes de primer año y colegio. Busco oportunidades de trabajo en IA, cloud o desarrollo de software.
 
 ### Experiencia y actividades relevantes
 
-- **Organizador, AWS Student Community Day Cochabamba, Bolivia 2026:** primera edición en Bolivia, celebrada en UPB Cochabamba el 10 de octubre de 2026, junto a los AWS Student Builder Groups. [Sitio del evento](https://bolivia.studentcommunity.day/).
 - **Miembro fundador, Meliorem (2024-presente):** automatización y digitalización para PYMES; diseño y despliegue de flujos escalables con n8n e integración de agentes de IA.
-- **Core Team y miembro fundador, AWS Student Builder Group UPB (2024-presente):** equipo fundador del primer AWS SBG de Cochabamba; taller AWS Amplify con React, Vite y Amplify Gen 2, diapositivas, documentación y guía de cinco módulos; resolución de incidencias IAM y limpieza de recursos Lambda huérfanos.
+- **Core Team y miembro fundador, AWS Student Builder Group UPB (2024-presente):** equipo fundador del primer AWS SBG de Cochabamba. Realicé varios talleres sobre EC2, S3, Amplify y Kiro. Organizador del AWS Student Community Day Cochabamba, Bolivia 2026, celebrado el 10 de octubre en UPB Cochabamba junto a los AWS Student Builder Groups. [Sitio del evento](https://bolivia.studentcommunity.day/).
 
 ### Proyectos y logros
 
@@ -24,7 +23,7 @@ Estudiante de Ingeniería de Sistemas en la Universidad Privada Boliviana (UPB),
 
 ### Habilidades y certificaciones
 
-Python, TypeScript, C#, Java, Kotlin; React Native, React, Zustand, React Query, Supabase; Git, GitHub, SQL, n8n, VS Code, Claude Code; AWS Amplify, IAM, Lambda, EC2 y S3. Español nativo; inglés B2-C1.
+Python, TypeScript, C#, Java, Kotlin; React Native, React, Zustand, React Query, Supabase; Git, GitHub, SQL y VS Code; AWS EC2, S3, IAM, Lambda y Amplify. IA: agentes de IA, IA generativa, automatización con n8n, Kiro y Claude Code. Español nativo; inglés B2-C1.
 
 - [AWS Certified Cloud Practitioner](https://www.credly.com/badges/b0c508b9-311e-41cd-96a7-028001fe66cf/public_url).
 - [AWS Certified AI Practitioner](https://www.credly.com/badges/62673368-d98d-4757-96c5-96cc790bdd5d): agosto de 2026, vigente hasta agosto de 2029.
@@ -35,13 +34,12 @@ Python, TypeScript, C#, Java, Kotlin; React Native, React, Zustand, React Query,
 
 ## English
 
-Systems Engineering student at Universidad Privada Boliviana (UPB), Cochabamba, Bolivia. Honor Roll member; second year of a nine-semester program started in 2025. Teaching Assistant for Calculus and Physics, tutoring first-year university and school students. Seeking an internship in AI, cloud or software development.
+Systems Engineering student at Universidad Privada Boliviana (UPB), Cochabamba, Bolivia. Honor Roll member; second year of a nine-semester program started in 2025. Teaching Assistant for Calculus and Physics, tutoring first-year university and school students. Seeking employment opportunities in AI, cloud or software development.
 
 ### Experience and relevant activities
 
-- **Organizer, AWS Student Community Day Cochabamba, Bolivia 2026:** first edition in Bolivia, held at UPB Cochabamba on October 10, 2026, alongside the AWS Student Builder Groups. [Event website](https://bolivia.studentcommunity.day/).
 - **Founding member, Meliorem (2024-present):** process automation and digitalization for SMEs; scalable n8n workflows and AI agent integration.
-- **Founding core team member, AWS Student Builder Group UPB (2024-present):** founding team of Cochabamba's first AWS SBG; AWS Amplify workshop using React, Vite and Amplify Gen 2, with slides, documentation and a five-module guide; IAM troubleshooting and orphaned Lambda resource cleanup.
+- **Founding core team member, AWS Student Builder Group UPB (2024-present):** founding team of Cochabamba's first AWS SBG. Delivered multiple workshops on EC2, S3, Amplify and Kiro. Organizer of the AWS Student Community Day Cochabamba, Bolivia 2026, held on October 10 at UPB Cochabamba alongside the AWS Student Builder Groups. [Event website](https://bolivia.studentcommunity.day/).
 
 ### Projects and achievements
 
@@ -53,7 +51,7 @@ Systems Engineering student at Universidad Privada Boliviana (UPB), Cochabamba, 
 
 ### Skills and certifications
 
-Python, TypeScript, C#, Java, Kotlin; React Native, React, Zustand, React Query, Supabase; Git, GitHub, SQL, n8n, VS Code, Claude Code; AWS Amplify, IAM, Lambda, EC2 and S3. Native Spanish; English B2-C1.
+Python, TypeScript, C#, Java, Kotlin; React Native, React, Zustand, React Query, Supabase; Git, GitHub, SQL and VS Code; AWS EC2, S3, IAM, Lambda and Amplify. AI: AI agents, generative AI, n8n automation, Kiro and Claude Code. Native Spanish; English B2-C1.
 
 - [AWS Certified Cloud Practitioner](https://www.credly.com/badges/b0c508b9-311e-41cd-96a7-028001fe66cf/public_url).
 - [AWS Certified AI Practitioner](https://www.credly.com/badges/62673368-d98d-4757-96c5-96cc790bdd5d): August 2026, valid through August 2029.
